@@ -33,7 +33,7 @@ namespace Hmm
             _pi = new Vector(StateCount, 0.0);
             foreach (var observation in observations)
             {
-                int index = StateIndexes[observation[0]];
+                var index = StateIndexes[observation[0]];
                 _pi.AddValue(index, 1.0);
             }
 
@@ -52,7 +52,7 @@ namespace Hmm
             TransitionProbabilities = new Matrix(StateCount, StateCount);
             foreach (var current in observations)
             {
-                for (int j = 0; j < current.Count - 1; j++)
+                for (var j = 0; j < current.Count - 1; j++)
                 {
                     var from = StateIndexes[current[j]];
                     var to = StateIndexes[current[j + 1]];

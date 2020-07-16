@@ -39,9 +39,9 @@ namespace Hmm
 
             CalculatePi(observations);
             i = 0;
-            foreach (TState state in states)
+            foreach (var state in states)
             {
-                Dictionary<TSymbol, double> emissionProbabilities =
+                var emissionProbabilities =
                     CalculateEmissionProbabilities(state, observations, emittedSymbols);
                 this.States[i] = new HmmState<TState, TSymbol>(state, emissionProbabilities);
                 i++;
@@ -63,8 +63,8 @@ namespace Hmm
         protected Dictionary<TSymbol, double> CalculateEmissionProbabilities(TState state, List<TState>[] observations,
             List<TSymbol>[] emittedSymbols)
         {
-            CounterHashMap<TSymbol> counts = new CounterHashMap<TSymbol>();
-            Dictionary<TSymbol, Double> emissionProbabilities = new Dictionary<TSymbol, double>();
+            var counts = new CounterHashMap<TSymbol>();
+            var emissionProbabilities = new Dictionary<TSymbol, double>();
             for (var i = 0; i < observations.Length; i++)
             {
                 for (var j = 0; j < observations[i].Count; j++)
