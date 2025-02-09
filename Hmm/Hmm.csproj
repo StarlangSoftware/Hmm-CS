@@ -3,13 +3,13 @@
     <PropertyGroup>
         <PackageId>NlpToolkit-Hmm</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.3</PackageVersion>
-        <TargetFrameworks>netcoreapp3.1;net8.0</TargetFrameworks>
+        <PackageVersion>1.0.4</PackageVersion>
+        <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NlpToolkit-DataStructure" Version="1.0.2" />
-      <PackageReference Include="NlpToolkit-Math" Version="1.0.5" />
+      <PackageReference Include="NlpToolkit-DataStructure" Version="1.0.6" />
+      <PackageReference Include="NlpToolkit-Math" Version="1.0.8" />
     </ItemGroup>
 
 </Project>
